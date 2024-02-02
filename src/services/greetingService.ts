@@ -44,6 +44,10 @@ export class greetings {
             item: "Moromoro"
         }, {
             item: "Morgens"
+        }, {
+            item: "Hojo hojo"
+        }, {
+            
         }
     ]
 
