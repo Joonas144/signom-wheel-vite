@@ -8,8 +8,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "colortranslator": "^4.1.0",
@@ -17,6 +17,7 @@
     "react-bootstrap": "^2.10.0",
     "react-custom-roulette": "^1.4.1",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
