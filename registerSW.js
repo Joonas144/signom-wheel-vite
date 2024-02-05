@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/signom-wheel-vite/sw.js', { scope: '/signom-wheel-vite/' })})}
