@@ -2,7 +2,7 @@
 import './App.scss';
 import WebFontLoader from 'webfontloader'
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { DefaultLayout } from './layouts/layouts.tsx';
 import GreetPage from './pages/greet.tsx';
 import NamePage from './pages/name.tsx';
@@ -20,12 +20,12 @@ export default function App() {
     <div>
       
       <DefaultLayout>
-      <BrowserRouter basename='/signom-wheel-vite/'>
+      <HashRouter basename='/signom-wheel-vite/'>
         <Routes>
           <Route path='/' Component={GreetPage}></Route>
           <Route path='/name' Component={NamePage}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       </DefaultLayout>
     
 
