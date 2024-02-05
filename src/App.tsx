@@ -7,6 +7,7 @@ import { DefaultLayout } from './layouts/layouts.tsx';
 import GreetPage from './pages/greet.tsx';
 import NamePage from './pages/name.tsx';
 
+
 const fonts = {
   google: {
     families: ['Signika:400,700']
