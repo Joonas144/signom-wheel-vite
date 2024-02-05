@@ -19,7 +19,7 @@ export default function App() {
     <div>
       
       <DefaultLayout>
-      <BrowserRouter >
+      <BrowserRouter basename='/signom-wheel-vite'>
         <Routes>
           <Route path='/' Component={GreetPage}></Route>
           <Route path='/name' Component={NamePage}></Route>
