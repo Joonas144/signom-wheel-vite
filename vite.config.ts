@@ -10,6 +10,7 @@ dns.setDefaultResultOrder('verbatim')
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    react(),
     reactRefresh(),
     VitePWA(),
   ],
@@ -20,8 +21,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        404: resolve(__dirname, '404.html')
+        //main: resolve(__dirname, 'index.html'),
+        //404: resolve(__dirname, '404.html')
 
       }
     }
