@@ -19,8 +19,6 @@ const NamePage = () => {
             item: "Trang"
         }, {
             item: "Tomi"
-        }, {
-            item: "S.P."
         }
     ]
 

@@ -17,8 +17,21 @@
   </body>
   <script>
     window.onload = () => {
-      let wheel = document.querySelector(".wheel-container > div")
-      wheel.style.visibility=''
+      const config = { attributes: true, childList: false, subtree: false };
+      const targetNode = document.querySelector(".wheel-container > div");
+
+      const callback = (mutationList, observer) => {
+          mutationList.forEach((mutation) => {
+              if (mutation.type == 'attributes' && targetNode.style.visibility == 'hidden') {
+                  targetNode.style.visibility = '';
+              }
+          });
+      };
+
+      const observer = new MutationObserver(callback);
+      observer.observe(targetNode, config);
+
+
     };
 </script>
 </html>
