@@ -7,10 +7,16 @@ import WheelItemService from '../services/wheelItemService';
 
 
 type PageProps = {
-    items: WheelItems
+    items: WheelItems,
+    onFinishCallback?: Function,
+    onStartCallback?: Function
 }
 
-const WheelComponent: FC<PageProps> = ({ items }) => {
+const WheelComponent: FC<PageProps> = ({
+                                        items, 
+                                        onFinishCallback,
+                                        onStartCallback
+                                      }) => {
     const [show, setShow] = useState(false);
     const [mustSpin, setMustSpin] = useState(false);
     const [greeting, setGreeting] = useState("");
@@ -20,15 +26,15 @@ const WheelComponent: FC<PageProps> = ({ items }) => {
   
     const onFinished = () => {
       setGreeting(WheelItemService.getLabels(items)[winnerNumber]);
-      console.log(greeting);
-      console.log(show);
       setMustSpin(false);
       handleShow();
+      if (onFinishCallback) onFinishCallback(winnerNumber, WheelItemService.getLabels(items)[winnerNumber]);
     };
   
     const handleSpinClick = () => {
       if (!mustSpin) {
         const newPrizeNumber = Math.floor(Math.random() * WheelItemService.getLabels(items).length);
+        if (onStartCallback) onStartCallback(newPrizeNumber, WheelItemService.getLabels(items)[newPrizeNumber]);
         setWinner(newPrizeNumber);
         setMustSpin(true);
       }

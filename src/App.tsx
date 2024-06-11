@@ -4,9 +4,7 @@ import WebFontLoader from 'webfontloader'
 
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { DefaultLayout } from './layouts/layouts.tsx';
-import GreetPage from './pages/greet.tsx';
-import NamePage from './pages/name.tsx';
-import Error404Page from './pages/404.tsx';
+import { DailyPage, GreetPage, NamePage, Error404Page } from './pages/pages.tsx'
 
 
 
@@ -27,6 +25,7 @@ export default function App() {
         <Routes>
           <Route path='/' Component={ GreetPage } />
           <Route path='/name' Component={ NamePage } />
+          <Route path='/daily' Component={ DailyPage } />
           <Route path='*' Component={ Error404Page } />
         </Routes>
       </HashRouter>

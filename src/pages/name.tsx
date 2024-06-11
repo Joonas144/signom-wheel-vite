@@ -6,19 +6,17 @@ const NamePage = () => {
         {
             item: "Joonas"
         }, {
-            item: "Teemu"
-        }, {
             item: "Krisse"
         }, {
             item: "Harri"
-        }, {
-            item: "Raikka"
         }, {
             item: "Eetu"
         }, {
             item: "Trang"
         }, {
             item: "Tomi"
+        }, {
+            item: "Ari"
         }
     ]
 
