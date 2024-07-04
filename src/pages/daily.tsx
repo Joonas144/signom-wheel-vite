@@ -9,18 +9,11 @@ const DailyPage = () => {
         {
             item: "Joonas"
         }, {
-            item: "Krisse"
+            item: "Raikka"
         }, {
-            item: "Harri"
-        }, {
-            item: "Eetu"
-        }, {
-            item: "Trang"
-        }, {
-            item: "Tomi"
-        }, {
-            item: "Ari"
+            item: "Teemu"
         }
+        // TODO: Make these editable by either URL parameters or in-page?
     ]
 
     const setItemToRemove = (itemIndex: number, item: WheelItems) => {
